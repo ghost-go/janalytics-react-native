@@ -167,40 +167,62 @@ public class JAnalyticsModule extends ReactContextBaseJavaModule {
     @ReactMethod
     public void identifyAccount(ReadableMap map, final Callback success, final Callback fail) {
         String accountID = map.getString("accountID");
-        long creationTime = map.getInt("creationTime");
-        String name = map.getString("name");
-        int sex = map.getInt("sex");
-        int paid = map.getInt("paid");
-        String birthday = map.getString("birthday");
-        String phone = map.getString("phone");
-        String email = map.getString("email");
-        String weiboID = map.getString("weiboID");
-        String wechatID = map.getString("wechatID");
-        String qqID = map.getString("qqID");
-        ReadableMap extras = map.getMap("extras");
-
         Account account = new Account(accountID);
-        account.setCreationTime(creationTime); // 账户创建的时间戳
-        account.setName(name);
-        account.setSex(sex);
-        account.setPaid(paid);
-        account.setBirthdate(birthday); // "19880920"是yyyyMMdd格式的字符串
-        account.setPhone(phone);
-        account.setEmail(email);
-        account.setWeiboId(weiboID);
-        account.setWechatId(wechatID);
-        account.setQqId(qqID);
-        if (extras != null) {
-            ReadableMapKeySetIterator iterator = extras.keySetIterator();
-            while (iterator.hasNextKey()) {
-                String key = iterator.nextKey();
-                if (TextUtils.isEmpty(key)) {
-                    return;
+        if (map.hasKey("creationTime")) {
+            long creationTime = map.getInt("creationTime");
+            account.setCreationTime(creationTime); // 账户创建的时间戳
+        }
+        if (map.hasKey("name")) {
+            String name = map.getString("name");
+            account.setName(name);
+        }
+        if (map.hasKey("sex")) {
+            int sex = map.getInt("sex");
+            account.setSex(sex);
+        }
+        if (map.hasKey("paid")) {
+            int paid = map.getInt("paid");
+            account.setPaid(paid);
+        }
+        if (map.hasKey("birthday")) {
+            String birthday = map.getString("birthday");
+            account.setBirthdate(birthday); // "19880920"是yyyyMMdd格式的字符串
+        }
+        if (map.hasKey("phone")) {
+            String phone = map.getString("phone");
+            account.setPhone(phone);
+        }
+        if (map.hasKey("email")) {
+            String email = map.getString("email");
+            account.setEmail(email);
+        }
+        if (map.hasKey("weiboID")) {
+            String weiboID = map.getString("weiboID");
+            account.setWeiboId(weiboID);
+        }
+        if (map.hasKey("wechatID")) {
+            String wechatID = map.getString("wechatID");
+            account.setWechatId(wechatID);
+        }
+        if (map.hasKey("qqID")) {
+            String qqID = map.getString("qqID");
+            account.setQqId(qqID);
+        }
+        if (map.hasKey("extras")) {
+            ReadableMap extras = map.getMap("extras");
+            if (extras != null) {
+                ReadableMapKeySetIterator iterator = extras.keySetIterator();
+                while (iterator.hasNextKey()) {
+                    String key = iterator.nextKey();
+                    if (TextUtils.isEmpty(key)) {
+                        return;
+                    }
+                    String value = extras.getString(key);
+                    account.setExtraAttr(key, value); // key如果为空，或者以极光内部namespace(符号$)开头，会设置失败并打印日志
                 }
-                String value = extras.getString(key);
-                account.setExtraAttr(key, value); // key如果为空，或者以极光内部namespace(符号$)开头，会设置失败并打印日志
             }
         }
+
         JAnalyticsInterface.identifyAccount(reactAppContext, account, new AccountCallback() {
             @Override
             public void callback(int code, String msg) {

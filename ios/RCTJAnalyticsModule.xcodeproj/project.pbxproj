@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4721D27E2945857B005A3470 /* libjanalytics-ios-2.1.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4721D27D2945857A005A3470 /* libjanalytics-ios-2.1.2.a */; };
 		5C0F2315237AEF6F0089C1F8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0F2314237AEF6F0089C1F8 /* UIKit.framework */; };
 		5C0F2317237AEF7A0089C1F8 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0F2316237AEF7A0089C1F8 /* SystemConfiguration.framework */; };
 		5C0F2319237AEF850089C1F8 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0F2318237AEF850089C1F8 /* CoreTelephony.framework */; };
@@ -20,7 +21,6 @@
 		5C0F2329237AEFC50089C1F8 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0F2328237AEFC50089C1F8 /* libresolv.tbd */; };
 		5C0F232B237AEFCD0089C1F8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C0F232A237AEFCD0089C1F8 /* libsqlite3.tbd */; };
 		5C8B93D5237A85A1001FE759 /* RCTJAnalyticsModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C8B93D3237A85A1001FE759 /* RCTJAnalyticsModule.m */; };
-		5C8B93D6237A85BC001FE759 /* libjanalytics-ios-2.1.0.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C8B93D1237A85A1001FE759 /* libjanalytics-ios-2.1.0.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libRNJAnalyticsModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libRNJAnalyticsModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4721D27D2945857A005A3470 /* libjanalytics-ios-2.1.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjanalytics-ios-2.1.2.a"; path = "RCTJAnalyticsModule/libjanalytics-ios-2.1.2.a"; sourceTree = "<group>"; };
 		5C0F2314237AEF6F0089C1F8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		5C0F2316237AEF7A0089C1F8 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		5C0F2318237AEF850089C1F8 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
@@ -51,7 +52,6 @@
 		5C0F232A237AEFCD0089C1F8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		5C8B93CF237A85A1001FE759 /* JANALYTICSEventObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JANALYTICSEventObject.h; path = RCTJAnalyticsModule/JANALYTICSEventObject.h; sourceTree = "<group>"; };
 		5C8B93D0237A85A1001FE759 /* JANALYTICSService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JANALYTICSService.h; path = RCTJAnalyticsModule/JANALYTICSService.h; sourceTree = "<group>"; };
-		5C8B93D1237A85A1001FE759 /* libjanalytics-ios-2.1.0.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libjanalytics-ios-2.1.0.a"; path = "RCTJAnalyticsModule/libjanalytics-ios-2.1.0.a"; sourceTree = "<group>"; };
 		5C8B93D2237A85A1001FE759 /* RCTJAnalyticsModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RCTJAnalyticsModule.h; path = RCTJAnalyticsModule/RCTJAnalyticsModule.h; sourceTree = "<group>"; };
 		5C8B93D3237A85A1001FE759 /* RCTJAnalyticsModule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RCTJAnalyticsModule.m; path = RCTJAnalyticsModule/RCTJAnalyticsModule.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -61,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4721D27E2945857B005A3470 /* libjanalytics-ios-2.1.2.a in Frameworks */,
 				5C0F232B237AEFCD0089C1F8 /* libsqlite3.tbd in Frameworks */,
 				5C0F2329237AEFC50089C1F8 /* libresolv.tbd in Frameworks */,
 				5C0F2327237AEFBF0089C1F8 /* libz.tbd in Frameworks */,
@@ -73,7 +74,6 @@
 				5C0F2319237AEF850089C1F8 /* CoreTelephony.framework in Frameworks */,
 				5C0F2317237AEF7A0089C1F8 /* SystemConfiguration.framework in Frameworks */,
 				5C0F2315237AEF6F0089C1F8 /* UIKit.framework in Frameworks */,
-				5C8B93D6237A85BC001FE759 /* libjanalytics-ios-2.1.0.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -121,9 +121,9 @@
 			children = (
 				5C8B93CF237A85A1001FE759 /* JANALYTICSEventObject.h */,
 				5C8B93D0237A85A1001FE759 /* JANALYTICSService.h */,
-				5C8B93D1237A85A1001FE759 /* libjanalytics-ios-2.1.0.a */,
 				5C8B93D2237A85A1001FE759 /* RCTJAnalyticsModule.h */,
 				5C8B93D3237A85A1001FE759 /* RCTJAnalyticsModule.m */,
+				4721D27D2945857A005A3470 /* libjanalytics-ios-2.1.2.a */,
 			);
 			name = RCTJAnalyticsModule;
 			sourceTree = "<group>";
